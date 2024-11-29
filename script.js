@@ -10,8 +10,12 @@ console.log(button);
 const divElement = document.getElementById('randomDiv');
 console.log(divElement);
 
-funkis("hello", "world")
 
-function funkis(param1, param2){
-    
+
+function handleClick(){
+    console.log("knapp");
 }
+
+document.getElementById("knapp").addEventListener ("click" , handleClick); 
+
+knapp.addEventListener("knapp",  (e) => console.log (e.taget.buttonId)); 

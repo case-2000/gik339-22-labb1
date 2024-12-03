@@ -11,11 +11,15 @@ const divElement = document.getElementById('randomDiv');
 console.log(divElement);
 
 
+function eventHanterare (event) {
+    console.log("Target element:", event.target);
 
-function handleClick(){
-    console.log("knapp");
+   
 }
 
-document.getElementById("knapp").addEventListener ("click" , handleClick); 
 
-knapp.addEventListener("knapp",  (e) => console.log (e.taget.buttonId)); 
+
+document.getElementById("knapp").addEventListener ("click" , eventHanterare);
+document.getElementById("color").addEventListener ("input" , eventHanterare);
+document.getElementById("content").addEventListener ("input" , eventHanterare);
+document.getElementById("divstyle").addEventListener ("click" , eventHanterare);

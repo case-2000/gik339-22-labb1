@@ -1,25 +1,26 @@
-const checkbox = document.getElementById('randomDiv');
-console.log(checkbox);
-
-const textFields = document.getElementsByClassName('textField'); 
-console.log(textFields);
-
+const checkbox = document.getElementById('divstyle');
+const textFields = document.getElementsByClassName('textfield'); 
 const button = document.getElementById('knapp')[0];
-console.log(button);
-
-const divElement = document.getElementById('randomDiv');
-console.log(divElement);
+const divElement = document.getElementById('randomdiv');
 
 
-function eventHanterare (event) {
-    console.log("Target element:", event.target);
-
+function eventHanterare (e) {
+    console.log("Target element:", e.target);
    
 }
 
 
-
-document.getElementById("knapp").addEventListener ("click" , eventHanterare);
+knapp.addEventListener ("click" , eventHanterare);
 document.getElementById("color").addEventListener ("input" , eventHanterare);
-document.getElementById("content").addEventListener ("input" , eventHanterare);
-document.getElementById("divstyle").addEventListener ("click" , eventHanterare);
+divstyle.addEventListener ("click" , eventHanterare);
+
+
+document.getElementById("content").addEventListener("blur", handleBlur);
+function handleBlur(e){
+    const name = e.target.name;
+    const value = e.target.value;
+    divElement.innerHTML = `<p>Fältet ${name} har värdet ${value}</p>`;
+} 
+
+
+

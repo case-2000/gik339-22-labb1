@@ -1,6 +1,6 @@
 const checkbox = document.getElementById('divstyle');
 const textFields = document.getElementsByClassName('textfield'); 
-const button = document.getElementById('knapp')[0];
+const button = document.getElementById('knapp');
 const divElement = document.getElementById('randomdiv');
 
 
@@ -10,7 +10,7 @@ function eventHanterare (e) {
 }
 
 
-knapp.addEventListener ("click" , eventHanterare);
+button.addEventListener ("click" , eventHanterare);
 document.getElementById("color").addEventListener ("input" , eventHanterare);
 divstyle.addEventListener ("click" , eventHanterare);
 
@@ -22,5 +22,14 @@ function handleBlur(e){
     divElement.innerHTML = `<p>Fältet ${name} har värdet ${value}</p>`;
 } 
 
+const color =document.getElementById("color");
 
+checkbox.addEventListener("change", () =>{
+    divElement.style.backgroundColor = color.value;
+});
+
+button.addEventListener ("click", () =>{
+    divElement.remove();
+
+});
 

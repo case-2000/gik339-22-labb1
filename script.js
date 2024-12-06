@@ -1,6 +1,6 @@
 const checkbox = document.getElementById('divstyle');
 const textFields = document.getElementsByClassName('textfield'); 
-const button = document.getElementById('knapp')[0];
+const button = document.getElementById('knapp');
 const divElement = document.getElementById('randomdiv');
 
 
@@ -21,6 +21,15 @@ function handleBlur(e){
     const value = e.target.value;
     divElement.innerHTML = `<p>Fältet ${name} har värdet ${value}</p>`;
 } 
+
+
+const color = document.getElementById("color");
+
+checkbox.addEventListener("change" , () => {
+    divElement.style.bakgroundColor = color.value;
+
+});
+
 
 
 

@@ -23,13 +23,6 @@ function handleBlur(e){
 } 
 
 
-const color = document.getElementById("color");
-
-checkbox.addEventListener("change" , () => {
-    divElement.style.bakgroundColor = color.value;
-
-});
-
 
 
 

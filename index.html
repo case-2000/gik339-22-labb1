@@ -3,23 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Labb 1 - Grupp 20</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #355;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
+        .container {
+            background-color: #ECF0F1;
+            color: #344;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 400px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        input[type="text"], input[type="checkbox"] {
+            width: calc(100% - 10px);
+            margin-bottom: 15px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .checkbox {
+            width: auto;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #22587c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2d719e;
+        }
+
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #F9F9F9;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
-    <h1>Labb 1 grupp 22</h1>
-    <form>
-        <label for="color">Färg: </label>
-            <input type="text" name="color" id="color" class="textfield"><br> <br>
-        <label for="content">Innehåll: </label>
-            <input type="text" name="content" id="content" class="textfield"><br> <br>
-        <label for="divstyle">Stil på box: </label>
-            <input type="checkbox" name="divstyle" id="divstyle" class="checkbox"><br><br>
-        <button id="knapp" type="reset">Ta bort</button>
-        <div id="randomdiv"></div>
-    </form>
+    <div class="container">
+        <h1>Labb 1 - Grupp 20</h1>
+        <form>
+            <label for="color">Färg</label>
+            <input type="text" id="color" name="color" class="textfield">
 
-    <script src="script.js"></script>
+            <label for="content">Innehåll</label>
+            <input type="text" id="content" name="content" class="textfield">
 
+            <label for="divStyle">Stil på box</label>
+            <input type="checkbox" id="divStyle" name="divStyle" class="checkbox"><br>
+
+            <button type="button" id="submitBtn" class="button">Lägg till</button>
+        </form>
+
+        <div id="output" class="output">
+            Div som egentligen ska vara tom
+        </div>
+    </div>
 </body>
 </html>

@@ -12,12 +12,6 @@ function eventHanterare(e) {
     }
 }
 
-/* TESTA OM TRIGGERS FUNGERAR
-
-function eventHanterare(e) {
-    console.log(`Event triggered by: ${e.target.name}, value: ${e.target.value}`);
-}*/
-
 button.addEventListener("click", eventHanterare);
 checkbox.addEventListener("click", eventHanterare);
 
